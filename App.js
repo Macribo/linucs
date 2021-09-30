@@ -1,13 +1,22 @@
-import { StatusBar } from 'expo-status-bar';
+// import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-
+import { StyleSheet, Text, View, Image, ImageBackground } from 'react-native';
+import { SafeAreaView, ScrollView, StatusBar } from 'react-native';
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView style={styles.container}>
+      <ScrollView style={styles.scrollView}>
+
+        <Image
+          style={styles.baile}
+          source={require('./assets/backgrounds/background_image.png')}
+        />
+
+        <ImageBackground source={require('./assets/backgrounds/logo@4x.png')}></ImageBackground>
+         
+        
+      </ScrollView>
+    </SafeAreaView>
   );
 }
 
@@ -18,4 +27,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+
+
+  baile: {},
+  uiSlider: {}
+  ,
 });
